@@ -5,7 +5,7 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="main.css" />
 	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
-	<title>Wine Compagny</title>
+	<title>Wine Company</title>
 </head>
     <body>
 	<div id="container">
