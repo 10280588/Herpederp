@@ -1,0 +1,7 @@
+<div id="actual_content">
+<h1>Wine Company</h1>
+
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sollicitudin blandit felis, in aliquet erat consectetur at. Vivamus neque sem, egestas in consectetur vel, sodales nec risus. Nam sit amet arcu sapien. Mauris cursus egestas arcu eu rutrum. Sed at accumsan urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam vel tempus libero. Vivamus et neque risus. Quisque interdum scelerisque est, eu porttitor metus fermentum vel. Donec tempor magna vitae nisi blandit ac dapibus nisi ultricies. Integer ligula mi, posuere et tempor a, ultrices eu purus.
+</p>
+<div>

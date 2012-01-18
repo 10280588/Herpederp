@@ -1,0 +1,207 @@
+body{
+	background-image: url("images/Grey-website-background.jpg");
+	margin: 0;
+	width: 100%;
+	height: 100%;
+    }
+
+#container{
+	position: relative; 
+	margin: 0 auto;
+	width: 960px;
+	height: 1400px;
+	background-color: #FFFFFF;
+	  }
+
+#header{
+	position: relative; 
+	margin-left:10px;
+	margin-bottom:5px;
+	width: 940px;
+	height:300px;
+	background-image: url("images/headerwithname.jpg");
+       }
+
+#top_menu{
+	position: relative;
+	margin-top: 0px;
+	margin-left: 10px;
+	height:60px;
+	width: 940px;
+	background-image: url("images/Grey-website-background.jpg");
+	text-align:left;
+	padding-top:5px;
+	 }
+
+#left_menu{
+	position: relative;
+	margin-top: 20px;
+	margin-left: 10px;
+	background-image: url("images/contentbackground.jpg");
+	width: 160px;
+	height: 940px;
+	text-align: left;
+	padding-top: 20px;
+	padding-left:-20px;
+	color:white;
+	  }
+/*begin binnen left_menu*/
+
+	/*begin alleen in index.html*/
+	#login_basket{
+	    	position: relative;
+		margin-top: 10px;
+		margin-left: 10px;
+	    	height: 140px;
+		color:#ffffff;	
+		text-align: left; 
+		font-weight:bold;
+		     }
+
+	
+	#contact_pane {
+	    	position: relative;
+		margin-top: 10px;
+		margin-left: 10px;
+	    	height: 140px;
+		color:#ffffff;	
+		text-align: left; 
+		font-weight:bold;
+		      }
+		/*class declaratie*/
+	.aanbieding{
+		position: relative;
+		margin-left: 10px;
+		margin-right: 10px;
+		height: 280px;
+		background: #fff;
+		}
+	
+		/*id declaraties*/	
+	#aanbieding1{margin-top: 10px;}
+
+	#aanbieding2{margin-top: 20px;}
+	
+/*einde van dingen alleen in left_menu*/
+		
+#content{
+	position: relative;
+	float:right;
+	margin-top:-960px;
+	margin-right:10px;
+	height: 960px;
+	width:760px;
+	background-image: url("images/contentbackground.jpg");
+	}
+/*begin  binnen content*/
+	
+	/*Begin binnen  productpage */
+
+	/*Informatiebalk boven de vlakken*/
+	#productpage_info{
+		position: absolute;
+		margin-top:40px;
+		margin-left:40px;
+		height:61px;
+		width:704px;
+		background-image: url("images/product_sort_upper.png");
+		}
+
+	/*class declaratie van negen vlakjes*/
+	.product_pane{
+		position:absolute;
+		height:300px;
+		width:165px;
+		background-image: url("images/product_background_shadow.png");
+		     }  /*eind class declaratie*/
+	
+	/*begin id declarties van negen vlakjes*/
+	#first_up{top:120px;left:40px;}
+	#second_up{top:120px;left:220px;}
+	#third_up{top:120px;left:400px;}
+	#fourth_up{top:120px;left:580px;}
+	
+	#first_middle{top:440px;left:40px;}
+	#second_middle{top:440px;left:220px;}
+	#third_middle{top:440px;left:400px;}
+	#fourth_middle{top:440px;left:580px;}
+	
+	#first_down{top:120px;left:40px;}
+	#second_down{top:120px;left:220px;}
+	#third_down{top:120px;left:400px;}
+	#fourth_down{top:120px;left:580px;}
+	
+	#middle_middle{top:440px;Left:280px;}
+	#right_middle{top:440px;left:520px;}
+	#left_down{top:600px;left:40px;}
+	#middle_down{top:600px;left:280px;}
+	#right_down{top:600px;left:520px;}
+	/*einde id declarieties*/
+
+	#productpage_number{
+	    	position: absolute;
+	   	top:760px;
+	    	left:40px;
+	    	height:61px;
+		width:704px;
+		background-image: url("images/product_sort_upper.png");
+	    	}
+	/*einde voor productpage*/	
+
+	#actual_content{
+	    	position: relative;
+		margin-top:40px;
+		margin-left:40px;
+		height:880px;
+		width:680px;
+		background:transparent;
+		color:white;
+		font-size:20px;}
+
+	#actual_content_algemene_voorwaarden{
+	    	position: relative;
+		margin-top:40px;
+		margin-left:40px;
+		height:880px;
+		width:680px;
+		background:transparent;
+		color:white;
+		font-size:10px;
+
+		
+		}
+/*einde binnen content*/
+
+
+ul{
+list-style: none;
+
+}
+
+li{
+display: inline;
+margin: 0 5px 5px 0;
+}	    
+
+a{
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-weight: bold;
+font-size:14px;
+text-decoration: none;
+padding: 6px 5px 0 5px;
+color:white;
+height:50px;
+width:5px;
+}
+
+a:link, a:visited{
+background: transparent;
+}
+
+a:hover, a:active{
+background-image: url("images/contentbackground.jpg");
+height:20px;
+width:5px;
+}
+
+
