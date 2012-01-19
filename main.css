@@ -1,6 +1,6 @@
 body{
 	background-image: url("images/Grey-website-background.jpg");
-	margin: 0;
+	margin: 0px;
 	width: 100%;
 	height: 100%;
     }
@@ -16,7 +16,7 @@ body{
 #header{
 	position: relative; 
 	margin-left:10px;
-	margin-bottom:5px;
+	margin-bottom:20px;
 	width: 940px;
 	height:300px;
 	background-image: url("images/headerwithname.jpg");
@@ -26,9 +26,9 @@ body{
 	position: relative;
 	margin-top: 0px;
 	margin-left: 10px;
-	height:60px;
+	height:55px;
 	width: 940px;
-	background-image: url("images/Grey-website-background.jpg");
+	background-image: url("images/menubar_grey.png");
 	text-align:left;
 	padding-top:5px;
 	 }
@@ -43,7 +43,6 @@ body{
 	text-align: left;
 	padding-top: 20px;
 	padding-left:-20px;
-	color:white;
 	  }
 /*begin binnen left_menu*/
 
@@ -92,20 +91,33 @@ body{
 	height: 960px;
 	width:760px;
 	background-image: url("images/contentbackground.jpg");
+
 	}
 /*begin  binnen content*/
 	
 	/*Begin binnen  productpage */
 
 	/*Informatiebalk boven de vlakken*/
+	#sort_bar{
+		position: absolute;
+		margin-top:-40px;
+		margin-left:200px;
+		height:60px;
+		width:500px;
+		text-align:left;
+		color:white;
+		font-size:40px;
+		
+	}
+
 	#productpage_info{
 		position: absolute;
-		margin-top:40px;
+		margin-top:120px;
 		margin-left:40px;
 		height:61px;
 		width:704px;
 		background-image: url("images/product_sort_upper.png");
-		}
+	    		 }
 
 	/*class declaratie van negen vlakjes*/
 	.product_pane{
@@ -113,38 +125,71 @@ body{
 		height:300px;
 		width:165px;
 		background-image: url("images/product_background_shadow.png");
-		     }  /*eind class declaratie*/
+		background-image:url("images/product_background_shadow.png");
+		     } 
+
+	.product_title{
+		position:absolute;
+		margin-left:10px;
+		margin-top:10px;
+		font-size:18px;
+		font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+		line-height:95%;
+		color:#31292a;
+		width:90px;
+		height:125px;	
+		}
 	
+
+	.product_image{
+		position:absolute;
+		height:260px;
+		width:90px;
+		margin-left:75px;
+		margin-top:45px;
+		}
+	
+	.prijs{position:relative;
+		margin-top:140px;
+		height:30px;
+		width:80px;
+		background-image: url("images/contentbackground.jpg");
+		color:#ffffff; 
+		font-weight:bold; 
+		font-size:24px;
+		font-family:"Arial", Helvetica, sans-serif;	
+		text-align:right;
+		padding-right:2px;
+		}
+
+	.mandjedicht{
+		position:relative;
+		margin-top:40px;
+		height:31px;
+		width:36px;
+		background-image: url("images/dicht.png");
+		}
+	/*eind class declaratie*/
+
 	/*begin id declarties van negen vlakjes*/
-	#first_up{top:120px;left:40px;}
-	#second_up{top:120px;left:220px;}
-	#third_up{top:120px;left:400px;}
-	#fourth_up{top:120px;left:580px;}
+	#first_up{top:200px;left:40px;}
+	#second_up{top:200px;left:220px;}
+	#third_up{top:200px;left:400px;}
+	#fourth_up{top:200px;left:580px;}
 	
-	#first_middle{top:440px;left:40px;}
-	#second_middle{top:440px;left:220px;}
-	#third_middle{top:440px;left:400px;}
-	#fourth_middle{top:440px;left:580px;}
-	
-	#first_down{top:120px;left:40px;}
-	#second_down{top:120px;left:220px;}
-	#third_down{top:120px;left:400px;}
-	#fourth_down{top:120px;left:580px;}
-	
-	#middle_middle{top:440px;Left:280px;}
-	#right_middle{top:440px;left:520px;}
-	#left_down{top:600px;left:40px;}
-	#middle_down{top:600px;left:280px;}
-	#right_down{top:600px;left:520px;}
-	/*einde id declarieties*/
+	#first_down{top:520px;left:40px;}
+	#second_down{top:520px;left:220px;}
+	#third_down{top:520px;left:400px;}
+	#fourth_down{top:520px;left:580px;}
+	/*einde id declaraties*/
 
 	#productpage_number{
 	    	position: absolute;
-	   	top:760px;
+	   	top:840px;
 	    	left:40px;
 	    	height:61px;
 		width:704px;
-		background-image: url("images/product_sort_upper.png");
+	background-image: url("images/product_sort_upper.png");
 	    	}
 	/*einde voor productpage*/	
 
@@ -156,23 +201,13 @@ body{
 		width:680px;
 		background:transparent;
 		color:white;
-		font-size:20px;}
-
-	#actual_content_algemene_voorwaarden{
-	    	position: relative;
-		margin-top:40px;
-		margin-left:40px;
-		height:880px;
-		width:680px;
-		background:transparent;
-		color:white;
-		font-size:10px;
+		font-size:20px;
 
 		
 		}
 /*einde binnen content*/
 
-
+/*top navigatie beschrijving*/
 ul{
 list-style: none;
 
@@ -186,7 +221,7 @@ margin: 0 5px 5px 0;
 a{
 font-family: Verdana, Arial, Helvetica, sans-serif;
 font-weight: bold;
-font-size:14px;
+font-size:20px;
 text-decoration: none;
 padding: 6px 5px 0 5px;
 color:white;
