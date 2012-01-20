@@ -4,114 +4,98 @@
 		        <h4>Informatie over betreffende pagina</h4>
 		        </div>
 		        <!--eerste product -->
-		        <div class="product_pane" id="first_up">
-				<div class="product_image">
-					<img src="images/fles1.png" />
-				</div>
+<?php
+include('connection.php');
+
+
+$query = "SELECT art_id FROM Art_Quickfilt_Hoofd WHERE hoofd_cat ='1' LIMIT 0,32 ";
+									$result = mysql_query($query) or die(mysql_error());
+									while($row=mysql_fetch_row($result))
+									{$art_i[]=$row[0];}   
+
+$limit_up=8;									$tot_count = count($art_i);  
+
+$queryp = "SELECT art_id FROM Art_Quickfilt_Hoofd WHERE hoofd_cat ='1' LIMIT 0,$limit_up";
+									$resultp = mysql_query($queryp) or die(mysql_error());
+									while($rowp=mysql_fetch_row($resultp))
+									{$art_id[]=$rowp[0];}   
+									$pag_count = count($art_id);  
+
+
+
+
+for($i=0; $i < $pag_count; $i++){
+
+					
+				$query2= "SELECT plaatje FROM Art_Short WHERE art_id = $art_id[$i]";
+									$result = mysql_query($query2) or die(mysql_error());
+									$row2 = mysql_fetch_array($result) or die(mysql_error());
+				
+				$query3 = "SELECT naam FROM Art_Short WHERE art_id = $art_id[$i]";
+									$result = mysql_query($query3) or die(mysql_error());
+									$titel = mysql_fetch_row($result) or die(mysql_error());
+				
+				$query4 = "SELECT prijs FROM Art_Short WHERE art_id = $art_id[$i]";
+									$result = mysql_query($query4) or die(mysql_error());
+									$prijs = mysql_fetch_row($result) or die(mysql_error());
+
+
+echo ('    
+
+
+
+			<div class="product_pane" >
+				 <div class="product_image">
+
+
+									<img src="'.$row2[0].'" alt=\"\" />
+
+				</div> 
 				<div class="product_title">
-					<p>Blanquefort Cava Cordon egro</p>
+				<p>'.$titel[0].'</p>
+
+
+
 				</div>
 				<div class="prijs">
-					<p>999,99</p>
+				<p>'.$prijs[0].'</p>
 				</div>
 				<div class="mandjedicht"></div>
 			</div>
-		        <!--tweede product -->
-		        <div class="product_pane" id="second_up">
-				<div class="product_image">
-					<img src="images/fles2.png" />
-				</div>
-				<div class="product_title">
-					<p>Oratoire Saint Vincent Côtes du Rhône Rouge</p>
-				</div>
-				<div class="prijs">
-					<p>199,99</p>
-				</div>
-				<div class="mandjedicht"></div>
-			</div>
-			
-			<!--derde product -->
-		        <div class="product_pane" id="third_up">
-				<div class="product_image">
-					<img src="images/fles3.png" />
-				</div>
-				<div class="product_title">
-					<p>Cata Rosa Navarra White</p>
-				</div>
-				<div class="prijs">
-					<p>19,99</p>
-				</div>
-				<div class="mandjedicht"></div>
-		        </div>
-		   <!--vierde product -->
-		        <div class="product_pane" id="fourth_up">
-				<div class="product_image">
-					<img src="images/fles4.png" />
-				</div>
-				<div class="product_title">
-					<p>Blanquefort Bergerac Moelleux</p>
-				</div>
-				<div class="prijs">
-					<p>4,99</p>
-				</div>
-				<div class="mandjedicht"></div>
-		        </div>
 
-			<!--vijfde product -->
-		        <div class="product_pane" id="first_down">
-				<div class="product_image">
-					<img src="images/fles5.png" />
-				</div>
-				<div class="product_title">
-					<p>Freixenet Cava Cordon Negro</p>
-				</div>
-				<div class="prijs">
-					<p>999,99</p>
-				</div>
-				<div class="mandjedicht"></div>
-		        </div>
-		        <!--zesde product -->
-			<div class="product_pane" id="second_down">
-				<div class="product_image">
-					<img src="images/fles6.png" />
-				</div>
-				<div class="product_title">
-					<p>Freixenet Cava Cordon Negro</p>
-				</div>
-				<div class="prijs">
-					<p>999,99</p>
-					</div>
-				<div class="mandjedicht"></div>
-		        </div>
 
-			<!--zevende product -->
-		        <div class="product_pane" id="third_down">
-				<div class="product_image">
-					<img src="images/fles7.png" />
-				</div>
-				<div class="product_title">
-					<p>Freixenet Cava Cordon Negro</p>
-				</div>
-				<div class="prijs">
-					<p>999,99</p>
-				</div>
-				<div class="mandjedicht"></div>
-		        </div>
-		        
-			<!--achtste product -->
-			<div class="product_pane" id="fourth_down">
-				<div class="product_image">
-					<img src="images/fles8.png" />
-				</div>
-				<div class="product_title">
-					<p>Freixenet Cava Cordon Negro</p>
-				</div>
-				<div class="prijs">
-					<p>999,99</p>
-				</div>
-				<div class="mandjedicht"></div>
-		        </div>
+			');
+			};      
+
+echo('
 		        <div id="productpage_number">
-		            1 2 3 4 5 6 7 8 9 10 11.. >
+<p>HERPEDERP</p> ');
+
+	
+for($i=0; $i < ($tot_count/'8'); $i++){
+$y = $i + 1;
+echo ('
+<a href="index.php?pag=productpage.html$_GET[y]">'.$y.'</a>
+');
+};
+
+		 $y = (isset($_GET['y'])) ? ($_GET['y']) : ('') ; //read URL-pag parameter in 
+		 if (
+			$y== 1
+			){
+			$pag=='productpage.html';
+			include($pag);
+			$limit_up=8;
+		 }
+		 else {
+			
+		 }
+		 
+
+?>		
+
+
 			</div>
+
+
 

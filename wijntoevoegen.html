@@ -1,13 +1,16 @@
 <div id="actual_content_wijntoevoegen">
-
+	<div id="wijntoevoegformulier">
+	
 	<h1> Wijn toevoegen </h1>
-	<form action="">
+	<form action="wijntoevoegen.php" method="post" name="wijntoevoegen" enctype="multipart/form-data">
+		
 		<table>
 		<tr>
-			<td> Naam: </td> <td> <input type="text" name="naam" /> </td>
+			<td> Naam: </td> <td> <input type="text" name="naam" /> </td> <td> 
 		</tr>
 		<tr>
-			<td> Categorie: </td> <td>  <select style="width:158px">   
+			<td> Categorie: </td> <td>  
+										<select style="width:158px" name="categorie">   
 											<option value="Wit">Wit</option>
 											<option value="Rood">Rood</option>
 											<option value="mousserend">Mousserend</option>
@@ -15,10 +18,10 @@
 								  </td>
 		</tr>
 		<tr>
-			<td> Land: </td> <td> <input type="text" name="land" /> </td>
+			<td> Land: </td> <td> <input type="text" name="land" /> </td> 
 		</tr>
 		<tr>
-			<td> Streek: </td> <td> <input type="text" name="streek" /> </td>
+			<td> Streek: </td> <td> <input type="text" name="streek" /> </td> 
 		</tr>
 		<tr>
 			<td> Prijs: </td> <td> <input type="text" name="prijs" /> </td>
@@ -30,24 +33,33 @@
 			<td> Smaak: </td> <td> <input type="text" name="smaak" /> </td>
 		</tr>	
 		<tr>
-			<td> Subcategorie: </td> <td> <input type="text" name="subcategorie" /> </td>
+			<td> Subcategorie: </td> <td> <input type="text" name="subcategorie" /> </td> 
 		</tr>
 		<tr>
-			<td> Jaar: </td> <td> <input type="text" name="jaar" /> </td>
+			<td> Jaar: </td> <td> <input type="text" name="jaar" /> </td> 
 		</tr>
 		<tr>
 			<td> Voorraad: </td> <td> <input type="text" name="voorraad" /> </td>
 		</tr>
 		<tr>
-			<td> Upload plaatje: </td> <td> <input type="hidden" name="30kb" value="100" /> <input name="file" type="file" /> </td>
+			<td> Upload preview plaatje: </td> <td> <input type="hidden" value="100" /> <input name="file" type="file" /> </td>
+		</tr>
+		<tr>
+			<td> Upload groot plaatje: </td> <td> <input type="hidden" value="100" /> <input name="file2" type="file" /> </td>
 		</tr>
 		<tr>
 			<td> Beschrijving: </td> <td> <textarea rows="5" cols="17" name="beschrijving"> </textarea></td>
 		</tr>		
 		<tr>
-			<td> </td> <td> <button>Voeg toe! </button> </td>
+			<td> </td> <td> <input type="submit" name="submit" value="Voeg Toe!" /> </td>
 		</tr>
 		</table>
 	</form>
-
+	
+	</div>
+	<div id="wijntoevoegen_opm">
+	<h4> Let op: </h4> </td>
+	<p>Gebruik bij land, streek en smaak een hoofdletter en schrijf alles volledig uit. <br /> 
+	Upload alleen plaatjes met een hoogte van maximaal 260px.</p>
+	</div>
 </div> 
